@@ -26,15 +26,17 @@ NewName OldName2
 */
 package main
 
+import "fmt"
+
 type MyStruct struct {
 	Name string
 }
 
 func change_array(s []*MyStruct) {
 	//println(&s)
-	println(&(s[0]), "in change_array start...")
+	fmt.Printf("%p, in change_array start...\n", &(s[0]))
 	s = s[1:]
-	println(&(s[0]), "in change_array end.")
+	fmt.Printf("%p, in change_array end.\n", &(s[0]))
 }
 
 func change_array_item(s []*MyStruct) {
