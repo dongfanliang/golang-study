@@ -38,11 +38,14 @@ func main() {
 	fmt.Printf("%v\n", t)
 	fmt.Printf("%+v\n", t)
 	fmt.Printf("%#+v\n", t)
+	fmt.Printf("%v\n", t)
 	fmt.Printf("%%\n")
 	// 可用字符串拼接
 	result1 := fmt.Sprintln("studygolang.com", 2013)
 	result2 := fmt.Sprint("studygolang.com", 2013)
 	log.Println(result1)
 	log.Println(result2)
-
+	a := []byte("xxxxx")
+	a = a[:0]
+	log.Println(string(a))
 }
